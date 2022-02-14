@@ -1,0 +1,32 @@
+{
+    "name": "ALPHSwapLottery-lottery-subgraph",
+    "version": "1.0.0",
+    "repository": "https://github.com/dmitro3/alhpswaplottery/",
+    "license": "GPL-3.0-or-later",
+    "scripts": {
+        "codegen": "graph codegen --output-dir src/types/",
+        "build": "graph build",
+        "create-local": "graph create alphswaplottery/alphswap-lottery --node http://127.0.0.1:8020",
+        "deploy-local": "graph deploy alphswaplottery/alphswap-lottery --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+        "deploy": "graph deploy alphswaplottery/alphswap-lottery --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+        "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Uniswap --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
+        "watch-local": "graph deploy alphswaplottery/alphswap-lottery --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^13.1.0",
+        "@commitlint/config-conventional": "^13.1.0",
+        "@graphprotocol/graph-cli": "^0.21.0",
+        "@graphprotocol/graph-ts": "^0.20.0",
+        "@typescript-eslint/eslint-plugin": "^4.31.0",
+        "@typescript-eslint/parser": "^4.31.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "husky": "^7.0.0",
+        "lerna": "^4.0.0",
+        "prettier": "^2.4.0",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {
+        "convert-string": "^0.1.0"
+    }
+}
